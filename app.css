@@ -1,0 +1,151 @@
+:root {
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: rgb(56, 41, 224);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+    --Borderradius: 10px;
+}
+
+*,
+*::after,
+*::after {
+    margin: 0;
+    font-family: 'Red Hat Display';
+    box-sizing: border-box;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 3vh;
+    font-size: var(--Borderradius);
+}
+
+body {
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Paleblue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.container {
+    height: min(90%, 550px);
+    border-radius: var(--Borderradius);
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: min(90%, 330px);
+}
+
+.container img {
+    border-radius: var(--Borderradius) var(--Borderradius) 0 0;
+}
+
+.content {
+    padding: 1rem 2rem;
+}
+
+h1 {
+    margin: 1rem 0;
+    color: var(--Darkblue);
+    font-size: 26px;
+    font-weight: 900;
+}
+
+p {
+    line-height: 1.5rem;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--Desaturatedblue);
+}
+
+.small-container {
+    border-radius: var(--Borderradius);
+    align-items: center;
+    text-align: left;
+    padding: 1rem;
+    height: 4.25rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--Verypaleblue);
+    margin-top: 1.75rem;
+}
+
+.small-container img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.small-container h2 {
+    font-size: 14px;
+}
+
+.small-container p {
+    font-size: 12px;
+}
+
+.small-container a {
+    margin-left: 1.25rem;
+    font-size: 12px;
+    display: block;
+    color: var(--Brightblue);
+    text-decoration: none;
+}
+
+.annual-plan {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: var(--Brightblue);
+    color: white;
+    height: 12.5%;
+    border-radius: var(--Borderradius);
+    width: 100%;
+    border: none;
+    margin: 1.5rem 0;
+    font-weight: 700;
+    box-shadow: 0px 12px 20px 5px rgba(56, 41, 224, 0.2);
+}
+
+.content>a {
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    text-decoration: none;
+    color: var(--Desaturatedblue);
+}
+
+/* Hover */
+button:hover,
+button:focus {
+    background-color: hsl(245, 75%, 65%);
+    cursor: pointer;
+}
+
+.content>a:hover,
+.content>a:focus {
+    color: hsl(224, 23%, 20%);
+
+}
+
+.small-container a:hover,
+.small-container a:focus {
+    color: hsl(245, 75%, 65%);
+}
+
+/* Media queries */
+@media only screen and (min-width: 600px) {
+    body {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url('images/pattern-background-desktop.svg');
+    }
+}
